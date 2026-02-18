@@ -20,7 +20,6 @@ const studentSchema = mongoose.Schema(
     phoneNumber: {
       type: Number,
       required: true,
-      trim: true,
       min: 10,
     },
     course: {
@@ -35,6 +34,7 @@ const studentSchema = mongoose.Schema(
     },
 
     isActive: {
+      type: String,
       enum: ["pending", "terminate", "active", "suspend"],
     },
   },

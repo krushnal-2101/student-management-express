@@ -13,10 +13,11 @@ app.use(express.json())
 
 app.use("/student", studentRoutes)
 
-app.get("/", (re, res) => {
+app.get("/", (req, res) => {
     res.status(200).json("hello from Server")
 })
 
+app.use("/add", studentRoutes)
 
 // undefined routes
 
@@ -31,7 +32,7 @@ app.use((error, req, res, next) => {
 
     res
         .status(error.statusCode || 500)
-        .json({massage: error.massage || "internal server ERROR"})
+        .json({message: error.message || "internal server ERROR"})
 
 })
 

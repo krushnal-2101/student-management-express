@@ -1,4 +1,4 @@
-import StudentModel from "../model/StudentModel.js";
+import StudentModel from "../model/StudentsModel.js";
 import HttpError from "../middleware/HttpError.js";
 
 const add = async (req, res, next) => {
